@@ -34,3 +34,19 @@ Similar issues as ultrasonic sensors. Even worse in that light degrades the sign
 Not really a good option for following. It is good at giving you distances to objects, but it doesn't "communicate" between anchors and beacons, so to speak. 
 
 Ultimately, after doing a lot of research, I stumbled across ultra-wideband (UWB) technology and specifically, the DWM1000 chip. This chip gives you precise distance measurements down to 10cm in accuracy and the module itself only costs ~$25. Even though this is a more complicated sensor than some of the others, this seemed to be the right fit for my application. 
+
+# Ultra-Wideband and the DWM1000
+
+# Technology
+
+# Functionality
+
+# Positioning and Math
+
+# Operation
+
+# Repository Contents
+
+# Results
+
+# Final Thoughts and Future Improvements
