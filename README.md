@@ -5,7 +5,7 @@ A real-world UWB ‘follow-me’ system using ESP32 + DW1000 modules for a DIY g
 # Overview
 I have seen many online repositories, blog posts, and forum questions around both the DWM1000 UWB module and a more general "follow-me" robot concept. All of these resources were useful in their own right, but I didn't come across excatly what I was looking for, which was to create a following robot using some sort of sensor paired with an ESP32. So I wanted to create this repository to help others who are trying to figure out how to make a robot or any wheeled object follow them. My application pertains specifically to a remote control golf push cart. I built my push cart using hoverboard motors and it worked really well, but I wanted to find a good way to make my golf cart follow me when I'm out on the course. This repository should be helpful to people trying to make ANY type of following device, not just a golf cart. 
 
-# Background
+# "Follow-Me" Options and Background
 To start, I tried figuring out the best way to create a follow-me mode. I basically wanted something that I could connect to my ESP32 on my golf cart that would follow some sort of beacon that I held in my pocket. I worked through the following options and discarded them for the following reasons. 
 
 <b>Bluetooth</b>
