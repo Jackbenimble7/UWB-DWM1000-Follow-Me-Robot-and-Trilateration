@@ -8,11 +8,11 @@ I have seen many online repositories, blog posts, and forum questions around bot
 # Background
 To start, I tried figuring out the best way to create a follow-me mode. I basically wanted something that I could connect to my ESP32 on my golf cart that would follow some sort of beacon that I held in my pocket. I worked through the following options and discarded them for the following reasons. 
 
-Bluetooth
+<b>Bluetooth</b>
 
 The way this would have worked would be to use either my phone or a battery powered ESP32 in my pocket to send out bluetooth signals to the ESP32 located on the golf cart. The golf cart ESP32 would register the strength of the Bluetooth signal and use that to determine how far away it was from the "beacon." You could mount two ESP32s on the robot, one on the left and one on the right, and use trilaterization to figure out the x and y coordinates of the beacon. This is something that could work, however Bluetooth is extremely noisy and signal strength is not a very reliable measurement. In a pinch, I think this option could work, but I wanted something that would be more accurate. 
 
-ESP-NOW Signals
+<b>ESP-NOW Signals</b>
 
 Same idea as above. The ESP32 beacon sends ESP-NOW signals to the cart-mounted ESP32s. The cart-mounted ESP32s use signal strength to determine x and y coordinates. Again, this is unreliable and not very accurate. 
 
