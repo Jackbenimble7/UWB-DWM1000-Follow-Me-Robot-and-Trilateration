@@ -1,4 +1,7 @@
-#
+#This code is a basic receiver code based off https://github.com/thotro/arduino-dw1000/tree/master
+#Review your pin inputs so that they match what is shown below. This code is used to receive distance readings from one DWM1000-enabled ESP32 to another. 
+#For the BasicSender and BasicReceiver codes to work, I had to connected two separate ESP32s to two separate DWM1000 modules. 
+
 
 #include <SPI.h>
 #include <DW1000.h>
