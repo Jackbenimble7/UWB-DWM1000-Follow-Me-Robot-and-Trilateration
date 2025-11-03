@@ -16,20 +16,20 @@ The way this would have worked would be to use either my phone or a battery powe
 
 Same idea as above. The ESP32 beacon sends ESP-NOW signals to the cart-mounted ESP32s. The cart-mounted ESP32s use signal strength to determine x and y coordinates. Again, this is unreliable and not very accurate. 
 
-GPS
+<b>GPS</b>
 
 I looked extensively into GPS, but unfortunately, the standard GPS sensors are only accurate to within 3 to 5 meters. This is not very useful when I want my cart to start following me when it is 5' behind me and stop when it is also 5' behind me. There are more advanced versions of GPS (RTK) but these are expensive and complicated. I think GPS COULD work if you were in a wide-open area with good satelite access, but again, I wanted something more accurate and robust. 
 
-Ultrasonic Sensors
+<b>Ultrasonic Sensors</b>
 
 This could work and I at first tried experimenting with it based on this blog post: https://elliotmade.com/2022/05/04/ultrasonic-direction-and-range-finding-hack/
 However, I could not for the life of me figure out how to get these modified ultrasonic sensors to work, so I ended up shelving the project. Either way, these sensors also have major limitations in that they are really only good for up to around 4m (12') and even that can be dicey. They are just not accurate enough for the following process I wanted. They also require having an ultrasonic sensor on your person pointed directly at the ultrasonic sensors mounted on the golf cart. Sure, you could clip a ultrasonic sensor pointed backwards on your belt, but it's going to be extremely unreliable. 
 
-IR Sensors
+<b>IR Sensors</b>
 
 Similar issues as ultrasonic sensors. Even worse in that light degrades the signal strength very quickly. 
 
-LIDAR
+<b>LIDAR</b>
 
 Not really a good option for following. It is good at giving you distances to objects, but it doesn't "communicate" between anchors and beacons, so to speak. 
 
