@@ -1,0 +1,47 @@
+#
+
+#include <SPI.h>
+#include <DW1000.h>
+
+const uint8_t PIN_RST = 27;
+const uint8_t PIN_CS  = 4;
+const uint8_t PIN_IRQ = 34;
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+  Serial.println("=== DWM1000 BASIC RECEIVER ===");
+
+  SPI.begin(18, 19, 23);
+
+  DW1000.begin(PIN_IRQ, PIN_RST);
+  DW1000.select(PIN_CS);
+
+  DW1000.setDeviceAddress(2);
+
+  DW1000.newConfiguration();
+  DW1000.setDefaults();
+  DW1000.commitConfiguration();
+
+  DW1000.newReceive();
+  DW1000.startReceive();
+}
+
+void loop() {
+  // older library used this function
+  if (DW1000.isReceiveDone()) {
+
+    String data;
+    DW1000.getData(data);
+
+    Serial.print("Received: ");
+    Serial.println(data);
+
+    // Clear the receive flag
+    DW1000.clearReceiveStatus();
+
+    // Restart receiver
+    DW1000.newReceive();
+    DW1000.startReceive();
+  }
+}
